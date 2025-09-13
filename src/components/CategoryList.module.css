@@ -1,0 +1,69 @@
+.categorySection {
+  text-align: center;
+  margin: 50px auto;
+}
+
+.categorySection h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4b2e2e;
+  margin-bottom: 32px;
+}
+
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.cardContent {
+  padding: 16px;
+}
+
+.cardContent h3 {
+  font-size: 18px;
+  margin-bottom: 18px;
+  color: #333;
+}
+
+.cardContent p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.cardContent button {
+  background: #5d4037;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cardContent button:hover {
+  background: #3e2723;
+}

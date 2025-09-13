@@ -1,0 +1,103 @@
+/* Vùng bao quanh toàn bộ form */
+.section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+/* Container căn giữa nội dung */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Khối CTA chia 2 bên */
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Bên trái: phần form */
+.formWrapper {
+  flex: 1 1 500px;
+}
+
+/* Tiêu đề và mô tả */
+.heading {
+  font-size: 1.5rem;
+  color: #c99a00;
+  margin-bottom: 10px;
+}
+
+.subheading {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Nhóm từng trường */
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+input,
+select {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #c99a00;
+  outline: none;
+}
+
+/* Nút gửi */
+.submitButton {
+  padding: 12px 20px;
+  background-color: #c99a00;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #b58900;
+}
+
+/* Bên phải: ảnh nội thất */
+.imageWrapper {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

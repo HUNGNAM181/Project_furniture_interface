@@ -1,0 +1,237 @@
+/* Footer Container */
+.footer {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: #ffffff;
+  padding: 60px 0 0 0;
+  margin-top: 80px;
+  position: relative;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #c99a00 0%, #f1c40f 100%);
+}
+
+/* Footer Content */
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+/* Footer Columns */
+.footerColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Brand Section */
+.brandTitle {
+  color: #c99a00;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.brandDescription {
+  color: #bdc3c7;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Column Titles */
+.columnTitle {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.columnTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 30px;
+  height: 3px;
+  background-color: #c99a00;
+  border-radius: 2px;
+}
+
+/* Footer Lists */
+.footerList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerList li {
+  margin-bottom: 12px;
+}
+
+.footerLink {
+  color: #bdc3c7;
+  text-decoration: none;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
+}
+
+.footerLink:hover {
+  color: #c99a00;
+  padding-left: 8px;
+}
+
+.footerLink:hover::before {
+  content: "→";
+  position: absolute;
+  left: -8px;
+  color: #c99a00;
+}
+
+/* Contact Section */
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.contactIcon {
+  width: 20px;
+  height: 20px;
+  color: #c99a00;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contactText {
+  color: #bdc3c7;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Footer Bottom */
+.footerBottom {
+  border-top: 1px solid #4a5568;
+  padding: 24px 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.copyright {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+  display: flex;
+  justify-content: center; /* canh giữa ngang */
+  align-items: center; /* canh giữa dọc nếu có nhiều dòng */
+  color: #95a5a6;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .footerContent {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .brandTitle {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 0 0 0;
+    margin-top: 60px;
+  }
+
+  .footerContent {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .brandTitle {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .brandDescription {
+    text-align: center;
+  }
+
+  .columnTitle {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .columnTitle::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footerList {
+    text-align: center;
+  }
+
+  .contactList {
+    align-items: center;
+  }
+
+  .contactItem {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .copyright {
+    padding: 0 20px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    margin-top: 40px;
+  }
+
+  .footerContent {
+    gap: 25px;
+  }
+
+  .brandTitle {
+    font-size: 20px;
+  }
+
+  .brandDescription {
+    font-size: 14px;
+  }
+
+  .columnTitle {
+    font-size: 16px;
+  }
+
+  .contactText {
+    font-size: 14px;
+  }
+}
