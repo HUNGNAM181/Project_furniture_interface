@@ -1,0 +1,128 @@
+.blogDetail4phongcach {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #fff;
+}
+
+/* ----- Intro Section ----- */
+.introSection {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.mainTitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 24px;
+}
+
+.styleList {
+  list-style: decimal;
+  padding-left: 20px;
+  text-align: left;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.styleItem {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+/* ----- Style Section ----- */
+.styleSection {
+  margin-bottom: 60px;
+  padding: 32px;
+  border-radius: 12px;
+  background-color: #fafafa;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.styleSection:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.sectionTitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #0056b3;
+  border-left: 6px solid #0056b3;
+  padding-left: 12px;
+}
+
+.sectionDescription {
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: #555;
+}
+
+/* ----- Characteristics Box ----- */
+.characteristicsBox,
+.suitableFor {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f0f7ff;
+  border-left: 5px solid #0056b3;
+}
+
+.characteristicsTitle {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #003d80;
+}
+
+.characteristicsList {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.characteristicItem {
+  font-size: 15px;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+/* ----- Images ----- */
+.styleImage {
+  display: block;
+  width: 100%;
+  max-width: 850px;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease;
+}
+
+.styleImage:hover {
+  transform: scale(1.02);
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: 22px;
+  }
+
+  .sectionTitle {
+    font-size: 20px;
+  }
+
+  .styleSection {
+    padding: 20px;
+  }
+
+  .styleImage {
+    max-width: 100%;
+  }
+}

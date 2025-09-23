@@ -3,13 +3,11 @@ import classes from "./LoginForm.module.css";
 
 import RegisterForm from "./SignupForm";
 
-const LoginForm = () => {
+const LoginForm = ({ onClose, onSwitchToRegister }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
-  const [showSignup, setShowSignup] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,14 +18,6 @@ const LoginForm = () => {
     setShowPassword(!showPassword);
   };
 
-  const handleClose = () => {
-    setIsVisible(false);
-  };
-
-  const handleRegister = () => {
-    setShowSignup(true);
-  };
-
   const handleForgotPassword = () => {
     console.log("Redirect to forgot password");
   };
@@ -36,18 +26,13 @@ const LoginForm = () => {
     console.log(`Login with ${platform}`);
   };
 
-  if (!isVisible) return null;
-  if (showSignup) {
-    return <RegisterForm />;
-  }
-
   return (
     <div className={classes.modalOverlay}>
       <div className={classes.modalContainer}>
         {/* Header */}
         <div className={classes.modalHeader}>
           <h2 className={classes.modalTitle}>Đăng nhập</h2>
-          <button onClick={handleClose} className={classes.closeButton}>
+          <button onClick={onClose} className={classes.closeButton}>
             <svg
               width="24"
               height="24"
@@ -158,7 +143,10 @@ const LoginForm = () => {
         <div className={classes.modalFooter}>
           <p className={classes.registerText}>
             Bạn chưa có tài khoản?{" "}
-            <button onClick={handleRegister} className={classes.registerLink}>
+            <button
+              onClick={onSwitchToRegister}
+              className={classes.registerLink}
+            >
               Đăng ký ngay
             </button>
           </p>

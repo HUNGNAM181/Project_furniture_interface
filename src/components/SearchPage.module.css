@@ -1,0 +1,362 @@
+/* SearchPage.module.css */
+
+.searchContainer {
+  min-height: 80vh;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.searchHeader {
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
+  text-align: center;
+}
+
+.searchTitle {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.keyword {
+  color: #3498db;
+  background: linear-gradient(45deg, #3498db, #2980b9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.searchSubtitle {
+  color: #7f8c8d;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.resultCount {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  display: inline-block;
+  backdrop-filter: blur(10px);
+}
+
+.resultsList {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.resultCard {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.resultCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+}
+
+.resultLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+.resultImageContainer {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.resultImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.resultCard:hover .resultImage {
+  transform: scale(1.05);
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(52, 152, 219, 0.8),
+    rgba(155, 89, 182, 0.8)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.resultCard:hover .imageOverlay {
+  opacity: 1;
+}
+
+.viewMore {
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.5rem 1.5rem;
+  border: 2px solid white;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.viewMore:hover {
+  background: white;
+  color: #3498db;
+}
+
+.resultContent {
+  padding: 1.5rem;
+}
+
+.resultTitle {
+  color: #2c3e50;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.3;
+  transition: color 0.3s ease;
+}
+
+.resultCard:hover .resultTitle {
+  color: #3498db;
+}
+
+.resultDescription {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.resultPath {
+  color: #3498db;
+  font-size: 0.85rem;
+  font-weight: 500;
+  font-family: "Courier New", monospace;
+  background: #f8f9fa;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  align-self: flex-start;
+}
+
+.resultKeywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.keywordTag {
+  background: linear-gradient(45deg, #e3f2fd, #bbdefb);
+  color: #1976d2;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid #e3f2fd;
+  transition: all 0.2s ease;
+}
+
+.keywordTag:hover {
+  background: #1976d2;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* No Results Styles */
+.noResults {
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: center;
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.noResultsIcon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+
+.noResultsTitle {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+}
+
+.noResultsDescription {
+  color: #666;
+  font-size: 1.1rem;
+  margin: 0 0 2rem 0;
+  line-height: 1.6;
+}
+
+.searchSuggestions {
+  text-align: left;
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+.suggestionsTitle {
+  color: #2c3e50;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+}
+
+.suggestionsList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.suggestionsList li {
+  color: #666;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.suggestionsList li:last-child {
+  border-bottom: none;
+}
+
+.suggestionsList li::before {
+  content: "💡";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+}
+
+.popularKeywords {
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+}
+
+.popularTitle {
+  color: #2c3e50;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.popularTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.popularTag {
+  background: white;
+  color: #666;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  border: 1px solid #dee2e6;
+  transition: all 0.3s ease;
+}
+
+.popularTag:hover {
+  background: #3498db;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .searchContainer {
+    padding: 1rem 0.5rem;
+  }
+
+  .searchTitle {
+    font-size: 2rem;
+  }
+
+  .resultsList {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0;
+  }
+
+  .resultCard {
+    margin: 0 0.5rem;
+  }
+
+  .resultImageContainer {
+    height: 180px;
+  }
+
+  .resultContent {
+    padding: 1rem;
+  }
+
+  .resultTitle {
+    font-size: 1.2rem;
+  }
+
+  .noResults {
+    margin: 1rem;
+    padding: 2rem 1rem;
+  }
+
+  .popularTags {
+    gap: 0.25rem;
+  }
+
+  .popularTag {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .searchTitle {
+    font-size: 1.5rem;
+  }
+
+  .resultImageContainer {
+    height: 150px;
+  }
+
+  .keywordTag {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+  }
+}

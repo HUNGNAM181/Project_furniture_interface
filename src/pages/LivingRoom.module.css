@@ -1,0 +1,487 @@
+/* LivingRoom.module.css */
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+.livingRoomSection {
+  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
+  color: #1a1a1a;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 40px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.heroSection {
+  text-align: center;
+  margin-bottom: 80px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 80px 40px;
+  border-radius: 25px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.heroSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #f7b733);
+  border-radius: 25px 25px 0 0;
+}
+
+.mainTitle {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.introText {
+  font-size: 1.25rem;
+  color: #555;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* Content Section */
+.contentSection {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.principlesSection {
+  background: white;
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  position: relative;
+  display: inline-block;
+}
+
+.sectionTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+  border-radius: 2px;
+}
+
+.sectionDescription {
+  font-size: 1.15rem;
+  color: #666;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* Guidelines Section */
+.guidelinesSection {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.guidelineItem {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  min-height: 450px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.guidelineItem:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.guidelineItem:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.guidelineContent {
+  flex: 1;
+  padding: 50px;
+}
+
+.guidelineTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.guidelineTitle::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background: linear-gradient(180deg, #667eea, #764ba2);
+  border-radius: 3px;
+}
+
+.guidelineDescription {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+.guidelineImage {
+  flex: 1;
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+}
+
+.livingRoomImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.livingRoomImage:hover {
+  transform: scale(1.05);
+}
+
+/* Furniture List Styling */
+.furnitureList {
+  margin: 30px 0;
+  background: #f8f9ff;
+  padding: 30px;
+  border-radius: 15px;
+  border-left: 5px solid #667eea;
+}
+
+.furnitureTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.furnitureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.furnitureItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-weight: 500;
+}
+
+.furnitureItem:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.furnitureIcon {
+  font-size: 1.4rem;
+  min-width: 25px;
+  text-align: center;
+}
+
+.additionalInfo {
+  margin-top: 25px;
+  font-style: italic;
+  color: #7f8c8d;
+  background: #ecf0f1;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid #3498db;
+}
+
+/* Design Section */
+.designSection {
+  background: white;
+  padding: 60px 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.designSamples {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 40px;
+}
+
+.sampleItem {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(248, 249, 250, 0.9) 100%
+  );
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  min-height: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.sampleItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.sampleItem.reverse {
+  flex-direction: row-reverse;
+}
+
+.sampleContent {
+  flex: 1;
+  padding: 45px;
+}
+
+.sampleTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.sampleTitle::before {
+  content: "✨";
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.sampleDescription {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.sampleImage {
+  flex: 1;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.sampleImage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    rgba(102, 126, 234, 0.1) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .livingRoomSection {
+    padding: 20px 0;
+  }
+
+  .mainTitle {
+    font-size: 2.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 2.2rem;
+  }
+
+  .heroSection {
+    padding: 50px 25px;
+    margin-bottom: 50px;
+  }
+
+  .introText {
+    font-size: 1.1rem;
+  }
+
+  .guidelineItem,
+  .guidelineItem:nth-child(even),
+  .sampleItem,
+  .sampleItem.reverse {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .guidelineContent,
+  .sampleContent {
+    padding: 30px 25px;
+  }
+
+  .guidelineImage,
+  .sampleImage {
+    height: 250px;
+  }
+
+  .furnitureGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .designSection,
+  .principlesSection {
+    padding: 40px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainTitle {
+    font-size: 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+
+  .guidelineTitle,
+  .sampleTitle {
+    font-size: 1.5rem;
+  }
+
+  .heroSection {
+    padding: 30px 20px;
+  }
+
+  .guidelineContent,
+  .sampleContent {
+    padding: 25px 20px;
+  }
+
+  .furnitureList {
+    padding: 20px;
+  }
+
+  .furnitureItem {
+    padding: 12px 15px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Animation Effects */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.heroSection {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.guidelineItem {
+  animation: slideInLeft 0.6s ease forwards;
+}
+
+.guidelineItem:nth-child(even) {
+  animation: slideInRight 0.6s ease forwards;
+}
+
+.sampleItem {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.sampleItem:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.sampleItem:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Scroll Effects */
+@media (prefers-reduced-motion: no-preference) {
+  .guidelineItem,
+  .sampleItem {
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+}

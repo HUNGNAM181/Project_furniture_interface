@@ -1,6 +1,8 @@
+import { useRef, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+
 import classes from "./Header.module.css";
 import LoginForm from "./LoginForm.jsx";
-import { useState } from "react";
 import RegisterForm from "./SignupForm.jsx";
 
 function Header() {
@@ -8,54 +10,55 @@ function Header() {
   const [loginForm, setLoginForm] = useState(false);
   const [signupForm, setSignupForm] = useState(false);
 
-  const handlerShowlogin = () => {
-    setLoginForm((prev) => !prev);
-  };
+  const searchInputRef = useRef();
+  const navigate = useNavigate();
 
-  const handlerShowRegister = () => {
-    setSignupForm((prev) => !prev);
-  };
-
-  // Function để scroll xuống form contact
-  const handleContactClick = (e) => {
+  const handleSearch = (e) => {
     e.preventDefault();
-    const contactForm = document.getElementById("contact-form");
-    if (contactForm) {
-      // Lấy vị trí của element
-      const elementPosition =
-        contactForm.getBoundingClientRect().top + window.pageYOffset;
-      // Trừ đi offset (ví dụ: 100px để không scroll quá)
-      const offsetPosition = elementPosition - 90;
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
+    const keyword = searchInputRef.current.value.trim();
+    if (keyword !== "") {
+      navigate(`/search?query=${encodeURIComponent(keyword)}`);
+      searchInputRef.current.value = "";
     }
   };
+
+  const handleShowLogin = () => {
+    setSignupForm(false); // Tắt form đăng ký nếu đang mở
+    setLoginForm(true); // Mở form đăng nhập
+  };
+
+  const handleShowRegister = () => {
+    setLoginForm(false); // Tắt form đăng nhập nếu đang mở
+    setSignupForm(true); // Mở form đăng ký
+  };
+
+  const handleCloseLogin = () => setLoginForm(false);
+  const handleCloseRegister = () => setSignupForm(false);
 
   return (
     <header className={classes.header}>
       <div className={classes.logo}>
-        <a href="/">
+        <Link to="/">
           <img src="/logo.jpg" alt="Logo" />
-        </a>
+        </Link>
       </div>
+
       <nav className={classes.navbar}>
         <ul className={classes.menu}>
           <li className={classes.menuItem}>
-            <a className={classes.link} href="#">
+            <Link className={classes.link} to="/">
               Trang chủ
-            </a>
+            </Link>
           </li>
           <li className={classes.menuItem}>
-            <a className={classes.link} href="#">
+            <Link className={classes.link} to="/gioi-thieu">
               Giới thiệu
-            </a>
+            </Link>
           </li>
           <li className={classes.menuItem}>
-            <a className={classes.link} href="#">
+            <Link className={classes.link} to="/tin-tuc">
               Tin tức
-            </a>
+            </Link>
           </li>
 
           <li
@@ -84,51 +87,46 @@ function Header() {
             {showSubmenu && (
               <ul className={classes.submenu}>
                 <li className={classes.submenuItem}>
-                  <a className={classes.submenuLink} href="#">
+                  <Link className={classes.submenuLink} to="/livingRoom">
                     Nội thất phòng khách
-                  </a>
+                  </Link>
                 </li>
                 <li className={classes.submenuItem}>
-                  <a className={classes.submenuLink} href="#">
+                  <Link className={classes.submenuLink} to="/bedroom">
                     Nội thất phòng ngủ
-                  </a>
+                  </Link>
                 </li>
                 <li className={classes.submenuItem}>
-                  <a className={classes.submenuLink} href="#">
+                  <Link className={classes.submenuLink} to="/kitchen">
                     Nội thất phòng bếp
-                  </a>
+                  </Link>
                 </li>
                 <li className={classes.submenuItem}>
-                  <a className={classes.submenuLink} href="#">
+                  <Link className={classes.submenuLink} to="/childrenBedRoom">
                     Nội thất phòng trẻ em
-                  </a>
+                  </Link>
                 </li>
               </ul>
             )}
           </li>
 
           <li className={classes.menuItem}>
-            <a
-              className={classes.link}
-              href="#contact-form"
-              onClick={handleContactClick}
-            >
+            <Link className={classes.link} to="/lien-he">
               Liên hệ
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
 
-      {/* Header actions */}
       <div className={classes.headerActions}>
-        {/* Search box */}
-        <div className={classes.searchBox}>
+        <form className={classes.searchBox} onSubmit={handleSearch}>
           <input
             type="text"
             placeholder="Tìm kiếm..."
             className={classes.searchInput}
+            ref={searchInputRef}
           />
-          <button className={classes.searchButton}>
+          <button type="submit" className={classes.searchButton}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -144,27 +142,43 @@ function Header() {
               />
             </svg>
           </button>
-        </div>
+        </form>
 
-        {/* Auth buttons */}
         <div className={classes.authButtons}>
           <button
             className={`${classes.btn} ${classes.btnRegister}`}
-            onClick={handlerShowRegister}
+            onClick={handleShowRegister}
           >
             Đăng ký
           </button>
           <button
             className={`${classes.btn} ${classes.btnLogin}`}
-            onClick={handlerShowlogin}
+            onClick={handleShowLogin}
           >
             Đăng nhập
           </button>
         </div>
       </div>
-      {signupForm && <RegisterForm />}
-      {/* Hiển thị form đăng nhập */}
-      {loginForm && <LoginForm />}
+
+      {signupForm && (
+        <RegisterForm
+          onClose={handleCloseRegister}
+          onSwitchToLogin={() => {
+            setSignupForm(false);
+            setLoginForm(true);
+          }}
+        />
+      )}
+
+      {loginForm && (
+        <LoginForm
+          onClose={handleCloseLogin}
+          onSwitchToRegister={() => {
+            setLoginForm(false);
+            setSignupForm(true);
+          }}
+        />
+      )}
     </header>
   );
 }

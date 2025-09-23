@@ -1,0 +1,351 @@
+.mainTitle {
+  font-size: 1.8rem;
+}
+
+.sectionTitle {
+  font-size: 1.6rem;
+} /* Kitchen.module.css */
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+.kitchenSection {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.heroSection {
+  text-align: center;
+  margin-bottom: 60px;
+  background: white;
+  padding: 60px 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.heroSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+}
+
+.mainTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.introText {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Content Section */
+.contentSection {
+  margin-bottom: 40px;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+  border-radius: 2px;
+}
+
+/* Design Trends */
+.designTrends {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.trendItem {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  min-height: 400px;
+}
+
+.trendItem:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.trendItem.reverse {
+  flex-direction: row-reverse;
+}
+
+.trendItem.smartKitchen {
+  flex-direction: column;
+  min-height: auto;
+}
+
+.trendContent {
+  flex: 1;
+  padding: 40px;
+}
+
+.trendContent.fullWidth {
+  width: 100%;
+}
+
+.trendImage {
+  flex: 1;
+  height: 400px;
+  overflow: hidden;
+}
+
+.kitchenImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.kitchenImage:hover {
+  transform: scale(1.05);
+}
+
+.trendTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.trendTitle::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #ff6b6b, #4ecdc4);
+  border-radius: 2px;
+}
+
+.trendDescription {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Smart Kitchen Accessories */
+.accessoriesGrid {
+  margin: 30px 0;
+}
+
+.accessoriesTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.accessoriesList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.accessoryItem {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  font-weight: 500;
+}
+
+.accessoryItem:hover {
+  transform: translateY(-5px);
+}
+
+.accessoryIcon {
+  font-size: 1.5rem;
+  min-width: 30px;
+}
+
+.brandInfo {
+  font-style: italic;
+  color: #7f8c8d;
+  text-align: center;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #4ecdc4;
+}
+
+/* Smart Kitchen Gallery */
+.smartKitchenGallery {
+  width: 100%;
+  padding: 0 40px 40px;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.galleryImage {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galleryImage:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .mainTitle {
+    font-size: 2.2rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .heroSection {
+    padding: 40px 20px;
+  }
+
+  .trendItem,
+  .trendItem.reverse {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .trendContent {
+    padding: 30px 20px;
+  }
+
+  .trendImage {
+    height: 250px;
+  }
+
+  .accessoriesList {
+    grid-template-columns: 1fr;
+  }
+
+  .smartKitchenGallery {
+    padding: 0 20px 30px;
+  }
+
+  .galleryGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 1.8rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .trend-title {
+    font-size: 1.4rem;
+  }
+
+  .intro-text,
+  .trend-description {
+    font-size: 1rem;
+  }
+
+  .hero-section {
+    padding: 30px 15px;
+  }
+
+  .trend-content {
+    padding: 20px 15px;
+  }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.trend-item {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.trend-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.trend-item:nth-child(3) {
+  animation-delay: 0.4s;
+}

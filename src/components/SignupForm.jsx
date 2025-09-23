@@ -1,9 +1,7 @@
 import { useState } from "react";
 import classes from "./SignupForm.module.css";
 
-import LoginForm from "./LoginForm";
-
-const RegisterForm = () => {
+const RegisterForm = ({ onClose, onSwitchToLogin }) => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -11,8 +9,6 @@ const RegisterForm = () => {
     password: "",
     confirmPassword: "",
   });
-  const [isVisible, setIsVisible] = useState(true);
-  const [showLogin, setShowLogin] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -28,29 +24,13 @@ const RegisterForm = () => {
     // Xử lý đăng ký ở đây
   };
 
-  const handleClose = () => {
-    setIsVisible(false);
-  };
-
-  const handleLogin = () => {
-    // Chuyển sang form đăng nhập
-    setShowLogin(true);
-  };
-
-  if (!isVisible) return null;
-
-  // 👉 Nếu bấm chuyển sang đăng nhập thì render LoginForm
-  if (showLogin) {
-    return <LoginForm />;
-  }
-
   return (
     <div className={classes.modalOverlay}>
       <div className={classes.modalContainer}>
         {/* Header */}
         <div className={classes.modalHeader}>
           <h2 className={classes.modalTitle}>Đăng ký</h2>
-          <button onClick={handleClose} className={classes.closeButton}>
+          <button onClick={onClose} className={classes.closeButton}>
             <svg
               width="24"
               height="24"
@@ -67,7 +47,6 @@ const RegisterForm = () => {
 
         {/* Form */}
         <form onSubmit={handleSubmit} className={classes.registerForm}>
-          {/* Full Name Field */}
           <div className={classes.formGroup}>
             <label className={classes.formLabel}>Họ và tên</label>
             <input
@@ -81,7 +60,6 @@ const RegisterForm = () => {
             />
           </div>
 
-          {/* Email Field */}
           <div className={classes.formGroup}>
             <label className={classes.formLabel}>Email</label>
             <input
@@ -95,7 +73,6 @@ const RegisterForm = () => {
             />
           </div>
 
-          {/* Phone Field */}
           <div className={classes.formGroup}>
             <label className={classes.formLabel}>Số điện thoại</label>
             <input
@@ -109,7 +86,6 @@ const RegisterForm = () => {
             />
           </div>
 
-          {/* Password Field */}
           <div className={classes.formGroup}>
             <label className={classes.formLabel}>Mật khẩu</label>
             <input
@@ -123,7 +99,6 @@ const RegisterForm = () => {
             />
           </div>
 
-          {/* Confirm Password Field */}
           <div className={classes.formGroup}>
             <label className={classes.formLabel}>Xác nhận mật khẩu</label>
             <input
@@ -137,7 +112,6 @@ const RegisterForm = () => {
             />
           </div>
 
-          {/* Register Button */}
           <button type="submit" className={classes.registerButton}>
             Đăng ký
           </button>
@@ -147,7 +121,7 @@ const RegisterForm = () => {
         <div className={classes.modalFooter}>
           <p className={classes.loginText}>
             Bạn đã có tài khoản?{" "}
-            <button onClick={handleLogin} className={classes.loginLink}>
+            <button onClick={onSwitchToLogin} className={classes.loginLink}>
               Đăng nhập
             </button>
           </p>

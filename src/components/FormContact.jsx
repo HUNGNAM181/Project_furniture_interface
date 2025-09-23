@@ -2,7 +2,7 @@ import classes from "./FormContact.module.css";
 
 function FormContact() {
   return (
-    <section id="contact-form" className={classes.section}>
+    <section className={classes.section}>
       <div className={classes.container}>
         <div className={classes.cta}>
           <div className={classes.formWrapper}>

@@ -79,27 +79,7 @@
 
 .footerList li {
   margin-bottom: 12px;
-}
-
-.footerLink {
   color: #bdc3c7;
-  text-decoration: none;
-  font-size: 15px;
-  transition: all 0.3s ease;
-  display: inline-block;
-  position: relative;
-}
-
-.footerLink:hover {
-  color: #c99a00;
-  padding-left: 8px;
-}
-
-.footerLink:hover::before {
-  content: "→";
-  position: absolute;
-  left: -8px;
-  color: #c99a00;
 }
 
 /* Contact Section */

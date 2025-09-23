@@ -15,52 +15,20 @@ const Footer = () => {
         <div className={classes.footerColumn}>
           <h4 className={classes.columnTitle}>Sản phẩm</h4>
           <ul className={classes.footerList}>
-            <li>
-              <a href="#" className={classes.footerLink}>
-                Nội thất phòng khách
-              </a>
-            </li>
-            <li>
-              <a href="#" className={classes.footerLink}>
-                Nội thất phòng ngủ
-              </a>
-            </li>
-            <li>
-              <a href="#" className={classes.footerLink}>
-                Nội thất phòng bếp
-              </a>
-            </li>
-            <li>
-              <a href="#" className={classes.footerLink}>
-                Nội thất phòng trẻ em
-              </a>
-            </li>
+            <li>Nội thất phòng khách</li>
+            <li>Nội thất phòng ngủ</li>
+            <li>Nội thất phòng bếp</li>
+            <li>Nội thất phòng trẻ em</li>
           </ul>
         </div>
 
         <div className={classes.footerColumn}>
           <h4 className={classes.columnTitle}>Dịch vụ</h4>
           <ul className={classes.footerList}>
-            <li>
-              <a href="#" className={classes.footerLink}>
-                Thiết kế nội thất
-              </a>
-            </li>
-            <li>
-              <a href="#" className={classes.footerLink}>
-                Thi công
-              </a>
-            </li>
-            <li>
-              <a href="#" className={classes.footerLink}>
-                Bảo hành
-              </a>
-            </li>
-            <li>
-              <a href="#" className={classes.footerLink}>
-                Tư vấn
-              </a>
-            </li>
+            <li>Thiết kế nội thất</li>
+            <li>Thi công</li>
+            <li>Bảo hành</li>
+            <li>Tư vấn</li>
           </ul>
         </div>
 

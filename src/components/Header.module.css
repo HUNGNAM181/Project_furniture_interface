@@ -8,14 +8,11 @@
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   font-weight: bold;
-
-  /* Luôn cố định trên cùng */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-
-  z-index: 1000; /* cao hơn submenu và các phần tử khác */
+  z-index: 1000;
 }
 
 /* Logo */
@@ -39,7 +36,7 @@
 }
 
 .menuItem {
-  position: relative; /* để submenu bám theo menu cha */
+  position: relative;
 }
 
 /* Link chính */
@@ -61,7 +58,7 @@
 .dropdownToggle {
   display: flex;
   align-items: center;
-  gap: 5px; /* khoảng cách giữa text và icon */
+  gap: 5px;
 }
 
 .dropdownIcon {
@@ -70,12 +67,11 @@
   transition: transform 0.3s ease;
 }
 
-/* Xoay icon khi hover hoặc khi submenu mở */
 .dropdown:hover .dropdownIcon {
   transform: rotate(180deg);
 }
 
-/* Submenu */
+/* Submenu cấp 1 */
 .submenu {
   position: absolute;
   top: 100%;
@@ -83,21 +79,20 @@
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   padding: 10px 0;
+  border-radius: 8px;
   list-style: none;
   min-width: 220px;
-  display: flex;
   flex-direction: column;
-  z-index: 1100; /* đảm bảo nổi trên header */
-  display: none; /* ẩn mặc định */
+  z-index: 1100;
+  display: none;
 }
 
-/* Hiện submenu khi hover */
 .menuItem:hover .submenu {
   display: flex;
 }
 
-/* Item trong submenu */
 .submenuItem {
+  position: relative;
   padding: 8px 20px;
 }
 
@@ -114,7 +109,7 @@
   color: #c99a00;
 }
 
-/* Header Actions Container */
+/* Header Actions */
 .headerActions {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -286,7 +281,7 @@
 
 @media (max-width: 480px) {
   .headerActions {
-    display: none; /* Ẩn search và auth buttons trên mobile nhỏ */
+    display: none;
   }
 
   .header {
