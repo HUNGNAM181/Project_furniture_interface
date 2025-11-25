@@ -1,6 +1,6 @@
 .container {
-  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-  color: white;
+  background-color: #fff; /* 🎨 be nhạt nhẹ, tươi sáng */
+  color: #c99a00;
   padding: 3rem 1rem;
   text-align: center;
 }
@@ -10,12 +10,12 @@
   font-weight: bold;
   margin-bottom: 2rem;
 }
-
-.timeline {
-  max-width: 1200px;
-  height: 400px;
+.image {
+  width: 100%;
+  max-width: 1200px; /* ảnh không vượt quá 1200px */
+  height: 600px; /* giữ đúng tỉ lệ ảnh */
+  border-radius: 8px; /* bo góc nhẹ cho đẹp */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* đổ bóng nhẹ */
+  display: block;
   margin: 0 auto;
-  background: url("https://hoanggiadesign.com.vn/wp-content/uploads/2022/10/Asset-3b201-1-1400x399.png")
-    center no-repeat;
-  background-size: contain;
 }

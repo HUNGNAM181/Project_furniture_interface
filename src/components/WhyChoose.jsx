@@ -16,7 +16,7 @@ function WhyChoose() {
         <div className={classes.reasons}>
           <div className={classes.reasonItem}>
             <img
-              src="https://hoanggiadesign.com.vn/wp-content/uploads/2022/10/icon-uy-tin-7933.png"
+              src="https://shop.thuviencokhi.com/wp-content/uploads/2018/06/icon-chat-luong.png"
               alt="Cam kết chất lượng"
             />
 
@@ -29,7 +29,7 @@ function WhyChoose() {
 
           <div className={classes.reasonItem}>
             <img
-              src="https://hoanggiadesign.com.vn/wp-content/uploads/2022/10/safe-icon.png"
+              src="https://png.pngtree.com/png-vector/20220820/ourmid/pngtree-trends-icon-progress-improvement-statistics-vector-png-image_19615284.png"
               alt="Đảm bảo tiến độ"
             />
             <h3>Đảm bảo tiến độ</h3>
@@ -41,7 +41,7 @@ function WhyChoose() {
 
           <div className={classes.reasonItem}>
             <img
-              src="https://hoanggiadesign.com.vn/wp-content/uploads/2022/10/icon-tan-tam-400x400.png"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSih6zRW6t7eGW-5Yv84jK4IJQh-NQBO_uyNQ&s"
               alt="Tận tâm với gia chủ"
             />
             <h3>Tận tâm với gia chủ</h3>
@@ -53,7 +53,7 @@ function WhyChoose() {
 
           <div className={classes.reasonItem}>
             <img
-              src="https://hoanggiadesign.com.vn/wp-content/uploads/2022/10/icon-bao-hanh.png"
+              src="https://oneled.vn/wp-content/uploads/2020/03/icon-bao-hanh.png"
               alt="Bảo hành dài hạn"
             />
             <h3>Bảo hành dài hạn</h3>

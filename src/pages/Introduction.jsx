@@ -55,7 +55,7 @@ function Introduction() {
         <div className={classes.cultureGrid}>
           <div className={classes.cultureItem}>
             <img
-              src="https://hoanggiadesign.com.vn/wp-content/uploads/2022/10/icon1-1.png"
+              src="https://png.pngtree.com/png-clipart/20190630/original/pngtree-vector-illustration-icon-logo-3-people-and-circle-png-image_4151674.jpg"
               alt="ảnh 3 người"
               className={classes.icon}
             />
@@ -67,7 +67,7 @@ function Introduction() {
           </div>
           <div className={classes.cultureItem}>
             <img
-              src="https://hoanggiadesign.com.vn/wp-content/uploads/2022/10/icon2-1.png"
+              src="https://png.pngtree.com/png-clipart/20250203/original/pngtree-diamond-gemstone-icon-in-gold-color-vector-png-image_19519625.png"
               alt="ảnh kim cương"
               className={classes.icon}
             />
@@ -78,7 +78,7 @@ function Introduction() {
           </div>
           <div className={classes.cultureItem}>
             <img
-              src="https://hoanggiadesign.com.vn/wp-content/uploads/2022/10/icon3.png"
+              src="https://png.pngtree.com/png-vector/20190820/ourmid/pngtree-light-bulb-icon-vector--light-bulb-ideas-symbol-illustration-png-image_1694700.jpg"
               alt="ảnh bóng đèn"
               className={classes.icon}
             />

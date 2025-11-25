@@ -11,9 +11,9 @@ const NewBlog = ({ image, title, date, description, link }) => {
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            strokWidth="1.5"
+            strokwidth="1.5"
             stroke="currentColor"
-            class={classes.icon}
+            className={classes.icon}
           >
             <path
               strokeLinecap="round"
